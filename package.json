@@ -7,7 +7,8 @@
     "directories": {},
     "dependencies": {
       "jquery": "npm:jquery@^2.1.4",
-      "knockout": "npm:knockout@^3.3.0"
+      "knockout": "npm:knockout@^3.3.0",
+      "system-text": "npm:system-text@^0.1.0"
     },
     "devDependencies": {
       "traceur": "github:jmcriffey/bower-traceur@0.0.89",

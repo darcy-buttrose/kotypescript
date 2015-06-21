@@ -41,9 +41,13 @@ export class main {
             ko.components.loaders.unshift(componentLoader);
 
             ko.components.register('person-table', {
-                viewModel: './Components/PersonTable/ViewModels/PersonTableViewModel',
-                template: 'text!./Components/PersonTable/Views/PersonTableView.html'
+                viewModel: 'build/Components/PersonTable/ViewModels/PersonTableViewModel',
+                template: 'build/Components/PersonTable/Views/PersonTableView.html!text'
             });
             ko.applyBindings(pageViewModel);
-        });    }
+            ko.components.get('person-table',(c) => {
+                console.log('component => ' + c !== null);
+            })
+        });
+    }
 }

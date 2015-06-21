@@ -4,7 +4,7 @@
 /// <reference path="../../../../typings/knockout/knockout.d.ts"/>
 import * as ko from "knockout";
 import {IPerson} from "../Models/IPerson";
-import {IPersonViewModel} from "IPersonViewModel";
+import {IPersonViewModel} from "./IPersonViewModel";
 
 export class PersonViewModel implements IPersonViewModel {
     public firstName: KnockoutObservable<string>;

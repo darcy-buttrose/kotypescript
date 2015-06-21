@@ -4,9 +4,9 @@
 /// <reference path="../../../../typings/knockout/knockout.d.ts"/>
 import * as ko from "knockout";
 import {IPerson} from "../Models/IPerson";
-import {IPersonViewModel} from "IPersonViewModel";
-import {PersonViewModel} from "PersonViewModel";
-import {IPersonTableViewModel} from "IPersonTableViewModel";
+import {IPersonViewModel} from "./IPersonViewModel";
+import {PersonViewModel} from "./PersonViewModel";
+import {IPersonTableViewModel} from "./IPersonTableViewModel";
 
 export class PersonTableViewModel implements IPersonTableViewModel {
     public persons : KnockoutObservableArray<IPersonViewModel>;
