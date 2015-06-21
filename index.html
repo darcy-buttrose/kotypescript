@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <person-tabl>Loading</person-tabl>
+
+    <script src="./jspm_packages/system.src.js"></script>
+    <script src="config.js"></script>
+    <script>
+        System.import('build/main').then(function(m){
+            console.log('index');
+            var main = new m.main();
+            main.ready();
+        }).catch(function(e) {
+            setTimeout(function(){
+                throw e;
+            })
+        });
+    </script>
+</body>
+</html>
