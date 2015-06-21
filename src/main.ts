@@ -27,11 +27,17 @@ export class main {
 
             var componentLoader = {
                 loadComponent: (name,compontConfig,callback) => {
-                    Promise.all([System.import(compontConfig.viewModel),System.import(compontConfig.template)])
+                    let templateName = compontConfig.template;
+                    let moduleName = compontConfig.module;
+                    let viewModelName = compontConfig.viewModel;
+                    Promise.all([System.import(moduleName),System.import(templateName)])
                         .then((loaded) => {
                             var result = {
                                 template: ko.utils.parseHtmlFragment(loaded[1]),
-                                createViewModel: function (params, componentInfo) { return new loaded[0].viewModel(params, componentInfo); }
+                                createViewModel: function (params, componentInfo) {
+                                    let vm = new loaded[0][viewModelName](params, componentInfo);
+                                    return vm;
+                                }
                             };
                             callback(result);
                         });
@@ -41,7 +47,8 @@ export class main {
             ko.components.loaders.unshift(componentLoader);
 
             ko.components.register('person-table', {
-                viewModel: 'build/Components/PersonTable/ViewModels/PersonTableViewModel',
+                module: 'build/Components/PersonTable/ViewModels/PersonTableViewModel',
+                viewModel: 'PersonTableViewModel',
                 template: 'build/Components/PersonTable/Views/PersonTableView.html!text'
             });
             ko.applyBindings(pageViewModel);

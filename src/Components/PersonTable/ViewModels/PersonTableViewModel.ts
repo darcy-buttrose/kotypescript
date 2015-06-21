@@ -10,7 +10,7 @@ import {IPersonTableViewModel} from "./IPersonTableViewModel";
 
 export class PersonTableViewModel implements IPersonTableViewModel {
     public persons : KnockoutObservableArray<IPersonViewModel>;
-    constructor(params) {
+    constructor(params, componentInfo) {
         this.persons = ko.observableArray([]);
         if (params && params.length > 0) {
             params.forEach((value:IPerson) => {
