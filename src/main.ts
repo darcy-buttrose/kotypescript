@@ -52,9 +52,6 @@ export class main {
                 template: 'build/Components/PersonTable/Views/PersonTableView.html!text'
             });
             ko.applyBindings(pageViewModel);
-            ko.components.get('person-table',(c) => {
-                console.log('component => ' + c !== null);
-            })
         });
     }
 }

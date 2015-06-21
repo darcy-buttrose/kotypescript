@@ -12,8 +12,9 @@ export class PersonTableViewModel implements IPersonTableViewModel {
     public persons : KnockoutObservableArray<IPersonViewModel>;
     constructor(params, componentInfo) {
         this.persons = ko.observableArray([]);
-        if (params && params.length > 0) {
-            params.forEach((value:IPerson) => {
+        if (params.value) {
+            let data : IPerson[] = params.value();
+            data.forEach((value:IPerson) => {
                 this.persons.push(new PersonViewModel(value));
             })
         }
