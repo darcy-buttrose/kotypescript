@@ -8,7 +8,7 @@
         <td data-bind="text: lastName"></td>
         <td>
             <span data-bind="visible: !editing(), text: fullName, click: edit">&nbsp;</span>
-            <input data-bind="visible: editing, textInput: fullName, hasFocus: editing" />
+            <input type="text" data-bind="visible: editing(), textInput: fullName"/>
         </td>
         <td data-bind="text: age"></td>
     </tr>
