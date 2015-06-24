@@ -34,7 +34,7 @@ export class main {
                         .then((loaded) => {
                             var result = {
                                 template: ko.utils.parseHtmlFragment(loaded[1]),
-                                createViewModel: function (params, componentInfo) {
+                                createViewModel: (params, componentInfo) => {
                                     let vm = new loaded[0][viewModelName](params, componentInfo);
                                     return vm;
                                 }
