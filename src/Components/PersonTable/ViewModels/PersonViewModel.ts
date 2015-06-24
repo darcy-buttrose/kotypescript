@@ -19,11 +19,11 @@ export class PersonViewModel implements IPersonViewModel {
         this.age = ko.observable(person.age);
         this.editing = ko.observable(false);
         this.fullName = ko.computed({
-            read: () => { return this.firstName() + ", " + this.lastName();},
-            write: (value) => {
-                var nameAndTitle = value.split(', ');
-                this.firstName(nameAndTitle[0]);
-                this.lastName(nameAndTitle[1]);
+            read: () => { return this.firstName() + " " + this.lastName();},
+            write: (value : string) => {
+                var names = value.split(', ');
+                this.firstName(names[0]);
+                this.lastName(names[1]);
             }
         });
     }

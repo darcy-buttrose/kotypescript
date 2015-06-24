@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "gulp": "^3.9.0",
+    "gulp-batch": "^1.0.5",
     "gulp-publish": "^0.8.5",
-    "gulp-tsc": "^0.10.1"
+    "gulp-tsc": "^0.10.1",
+    "gulp-watch": "^4.2.4"
   },
   "jspm": {
     "directories": {},
