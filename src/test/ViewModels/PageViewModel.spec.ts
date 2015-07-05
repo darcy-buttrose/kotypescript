@@ -13,8 +13,8 @@ describe('PageViewModel', () => {
             System.import('code/Components/PersonTable/Models/Person')
         ])
         .then((loaded) => {
-            var PageViewModel = loaded[0].PageViewModel;
-            var Person = loaded[1].Person;
+            var PageViewModel:PageViewModelFactory = loaded[0].PageViewModel;
+            var Person:PersonFactory = loaded[1].Person;
 
             let people:IPerson[] = [
                 new Person('Darcy', 'Buttrose', 45),
