@@ -2,9 +2,9 @@
  * Created by Darcy on 19/06/2015.
  */
 /// <reference path="../../../../typings/knockout/knockout.d.ts"/>
+/// <reference path="../Models/IPerson.d.ts"/>
+/// <reference path="./IPersonViewModel.d.ts"/>
 import * as ko from "knockout";
-import {IPerson} from "../Models/IPerson";
-import {IPersonViewModel} from "./IPersonViewModel";
 
 export class PersonViewModel implements IPersonViewModel {
     public firstName: KnockoutObservable<string>;

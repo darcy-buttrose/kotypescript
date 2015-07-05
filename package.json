@@ -2,13 +2,21 @@
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-batch": "^1.0.5",
+    "gulp-jasmine": "^2.0.1",
     "gulp-publish": "^0.8.5",
     "gulp-tsc": "^0.10.1",
-    "gulp-watch": "^4.2.4"
+    "gulp-watch": "^4.2.4",
+    "jasmine-spec-reporter": "^2.4.0",
+    "systemjs": "^0.18.4"
   },
   "jspm": {
     "directories": {},
     "dependencies": {
+      "fs-plus": "npm:fs-plus@^2.8.1",
+      "fsplus": "npm:fsplus@^0.1.0",
+      "jasmine": "npm:jasmine@^2.3.1",
+      "jasmine-reporters": "npm:jasmine-reporters@^2.0.6",
+      "jasmine-spec-reporter": "npm:jasmine-spec-reporter@^2.2.3",
       "jquery": "npm:jquery@^2.1.4",
       "knockout": "npm:knockout@^3.3.0",
       "system-text": "npm:system-text@^0.1.0"

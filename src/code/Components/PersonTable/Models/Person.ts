@@ -1,7 +1,7 @@
 /**
  * Created by Darcy on 19/06/2015.
  */
-import {IPerson} from "./IPerson";
+/// <reference path="./IPerson.d.ts"/>
 export class Person implements IPerson {
     firstName:string;
     lastName:string;

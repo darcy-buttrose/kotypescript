@@ -3,12 +3,15 @@
  */
 /// <reference path="../typings/jquery/jquery.d.ts"/>
 /// <reference path="../typings/knockout/knockout.d.ts"/>
+/// <reference path="../typings/es6-promise/es6-promise.d.ts"/>
+/// <reference path="../typings/systemjs/systemjs.d.ts"/>
+
+/// <reference path="./Components/PersonTable/Models/IPerson.d.ts"/>
+/// <reference path="./ViewModels/IPageViewModel.d.ts"/>
 
 import * as $ from 'jquery';
 import * as ko from 'knockout';
-import {IPerson} from './Components/PersonTable/Models/IPerson';
 import {Person} from './Components/PersonTable/Models/Person';
-import {IPageViewModel} from './ViewModels/IPageViewModel';
 import {PageViewModel} from './ViewModels/PageViewModel';
 
 export class main {
@@ -47,9 +50,9 @@ export class main {
             ko.components.loaders.unshift(componentLoader);
 
             ko.components.register('person-table', {
-                module: 'build/Components/PersonTable/ViewModels/PersonTableViewModel',
+                module: 'build/code/Components/PersonTable/ViewModels/PersonTableViewModel',
                 viewModel: 'PersonTableViewModel',
-                template: 'build/Components/PersonTable/Views/PersonTableView.html!text'
+                template: 'build/code/Components/PersonTable/Views/PersonTableView.html!text'
             });
             ko.applyBindings(pageViewModel);
         });

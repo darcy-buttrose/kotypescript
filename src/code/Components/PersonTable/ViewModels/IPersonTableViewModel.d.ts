@@ -2,8 +2,8 @@
  * Created by Darcy on 20/06/2015.
  */
 /// <reference path="../../../../typings/knockout/knockout.d.ts"/>
-import {IPersonViewModel} from "IPersonViewModel";
+/// <reference path="./IPersonViewModel.d.ts"/>
 
-export interface IPersonTableViewModel {
+interface IPersonTableViewModel {
     persons : KnockoutObservableArray<IPersonViewModel>;
 }
